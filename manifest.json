@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "version": "1.0",
+  "name": "important webpage",
+  "action": {
+    "default_popup": "java.html",
+    "default_icon": "icon.jpg"
+  },
+
+  "permissions": ["tabs"]
+}
