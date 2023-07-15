@@ -4,7 +4,7 @@
   "name": "important webpage",
   "action": {
     "default_popup": "java.html",
-    "default_icon": "icon.jpg"
+    "default_icon": "/images/icon.jpg"
   },
 
   "permissions": ["tabs"]

@@ -1,25 +1,40 @@
 body
 {
 min-width: 400px;
+border-radius: 20px;
+background-color: black ;
+font-family: 'Roboto', sans-serif;
 }
 
 button
 {
-background-color: #536CB0;
-color: white;
-border: 1px solid #536CB0;
+background-color: #ADD8E6;
+color: black;
+border: 1px solid #ADD8E6;
 padding: 10px;
 border-radius: 5px;
 margin-left: 8px;
 margin-top: 12px;
 font-weight: bold;
+font-family: 'Roboto', sans-serif;
 
+
+}
+
+button:hover {
+    background-color: #17e2f1;
+    transform: scale(1.05);
+    border: none;
+}
+button:active {
+    background-color: #f6b3ee;
+    transform: scale(1);
 }
 
 #del
 {
-        background: white;
-        color: #536CB0 ;
+        background: black;
+        color: #ADD8E6 ;
         
 }
 
@@ -27,15 +42,16 @@ input
 {
     padding: 10px;
     width: 100%;
-    border-color: #536CB0;
+    background-color: #ADD8E6;
     border-width: 1px;
     box-sizing: border-box;
-
+    border-radius: 10px;
+    color: black;
 }
 
 a
 {
-   color: #536CB0 ;
+   color: #ADD8E6;
 }
 ul{
     padding-left: 5px;
