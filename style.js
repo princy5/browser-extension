@@ -1,9 +1,9 @@
-let myleads = [];
-const inpulel = document.getElementById("inputel");
+let myleads = []; //array as to store all the input values
+const inpulel = document.getElementById("inputel");  //DOM
 const inputbtn = document.getElementById("input-btn");
-const ulel = document.getElementById("ulel");
-const delel = document.getElementById("del");
 const tabel = document.getElementById("tab");
+const delel = document.getElementById("del");
+const ulel = document.getElementById("ulel");
 let lfromlstorage = JSON.parse(localStorage.getItem("myleads"));
 
 if (lfromlstorage) {
@@ -11,11 +11,15 @@ if (lfromlstorage) {
   render(myleads);
 }
 
+// till now,code tends to restore the application state upon page reload or revisit.
+//next
+
+// when button to store current url is clicked
 tabel.addEventListener("click", function () {
   chrome.tabs.query({ active: true, currentWindow: true },
      function (tabs) {
     myleads.push(tabs[0].url);
-    localStorage.setItem("myleads", JSON.stringify(myleads));
+    localStorage.setItem("myleads", JSON.stringify(myleads));    
     render(myleads);
   })
 })
@@ -38,10 +42,13 @@ function render(leads) {
   for (i = 0; i < leads.length; i++) {
     listitems += `
     <li> 
-    <a target= '_blank' href='${leads[i]}'> ${leads[i]}
-      </a> 
+    <a target= '_blank' href='${leads[i]}'> ${leads[i]} </a> 
     </li>`;
   }
 
-  ulel.innerHTML = listitems;
+  ulel.innerHTML = listitems;  //displaying list items
 }
+
+
+
+
